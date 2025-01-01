@@ -2,12 +2,12 @@
 <nav>
             <a href="studentdata.html">home</a> 
             <a href="attendence.html">attendance</a> 
-            <a method="post" href="http://192.168.96.32/attendence4/studentlist.php" >insert record</a> | 
-            <a method="post" href="http://192.168.96.32/attendence4/studentdata1.php">upload new student list</a> 
-            <a method="post" href="http://192.168.96.32/attendence4/studentdata2.php"name='deleting1'>delete list</a> 
-            <a method="post" href="http://192.168.96.32/attendence4/studentdata3.php"name='deleterec1'>delete all records</a> 
-            <a method="post" href="http://192.168.96.32/attendence4/studentdata4.php"name='modifys1'>modify content</a>
-            <a method="post" href="http://192.168.96.32/attendence4/show.php">show details</a>
+            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/studentlist.php" >insert record</a> | 
+            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/studentdata1.php">upload new student list</a> 
+            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/studentdata2.php"name='deleting1'>delete list</a> 
+            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/studentdata3.php"name='deleterec1'>delete all records</a> 
+            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/studentdata4.php"name='modifys1'>modify content</a>
+            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/show.php">show details</a>
         </nav>
         <script type="text/javascript" src="studentdata.js"></script>
         <style>
@@ -181,7 +181,7 @@ input[type="password"] {
 $sq="SHOW TABLES FROM $db";
 $rr=mysqli_query($conn,$sq);
 ?>
-    <form  method='post' action='http://192.168.96.32/attendence4/show.php'>
+    <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/show.php'>
         <h1>Search Here for total list</h1>
         <?php
 echo "<select onchange='fun()' id='insert' >";
@@ -215,7 +215,7 @@ echo "</select><br>";
         <input type='submit' name='table' value='show list'/><br>
     </form>
 
-    <form  method='post' action='http://192.168.96.32/attendence4/show.php' id='tform'>
+    <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/show.php' id='tform'>
         <h1>Search Here with name or register number</h1>
         <?php
         $sq="SHOW TABLES FROM $db";
@@ -237,7 +237,7 @@ echo "</select><br>";
         <input type='submit' name='table1' value='search'/><br>
 </form>
 
-<form  method='post' action='http://192.168.96.32/attendence4/show.php' id='ttform'>
+<form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/show.php' id='ttform'>
     <h1>Search Here with date</h1>
         <?php
         $sq="SHOW TABLES FROM $db";
@@ -278,7 +278,7 @@ echo "</select><br>";
         document.getElementById('tables').value=val2
         }
     </script>
-<form  method='post' action='http://192.168.96.32/attendence4/show.php' id='tttform'>
+<form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/show.php' id='tttform'>
     <h1>Search Here with date</h1>
         <?php
         $sn="localhost";
@@ -382,7 +382,7 @@ $array[] = $Store;
     if($df=='s'){
     $count=mysqli_fetch_array ( mysqli_query($conn,"SELECT count(id) FROM $tab WHERE date_of_absent='$input'"));
     ?>
-     <form  method='post' action='http://192.168.96.32/attendence4/show.php' id='tableform' style='display:content;'>
+     <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/show.php' id='tableform' style='display:content;'>
     
     <h4>COUNT::<?php echo $count[0];?></h4>
    <table border='1' style='border-collapse:collapse; color:white;border-color:pink'>
@@ -506,7 +506,7 @@ while($dd=mysqli_fetch_array($ddd)){
     <?php
                     }
                     ?>
-                        <form  method='post' action='http://192.168.96.32/attendence4/test.php'> 
+                        <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/test.php'> 
     <input type='submit' name='down' value='download'/>
     </form>
     <?php
@@ -558,7 +558,7 @@ else{
             $s="CREATE TABLE down AS SELECT * FROM $tab";
             $ss=mysqli_query($conn,$s);
             //$ss=mysqli_query($conn,$d);
-           ?> <form  method='post' action='http://192.168.96.32/attendence4/test.php'> 
+           ?> <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/test.php'> 
             <input type='submit' name='down' value='download'/>
             </form>
             <?php
@@ -611,7 +611,7 @@ else{
             $ddd=mysqli_query($conn,$dd);
             ?>
             </form>
-            <form  method='post' action='http://192.168.96.32/attendence4/test.php'> 
+            <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/test.php'> 
             <input type='submit' name='down' value='download'/>
             </form>
             <?php
@@ -658,7 +658,7 @@ else{
             $dd="SELECT * FROM $tab  WHERE id=$nr or studentname=$nr";
             $dd="INSERT INTO down SELECT * FROM $tab  WHERE id='$nr' or studentname='$nr'";
             $ddd=mysqli_query($conn,$dd);
-            ?> <form  method='post' action='http://192.168.96.32/attendence4/test.php'> 
+            ?> <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/test.php'> 
                 <input type='submit' name='down' value='download'/>
             </form>
             <?php
@@ -666,7 +666,7 @@ else{
         }
     ?>
     
-<form  method='post' action='http://192.168.96.32/attendence4/show.php' id='tableform' style='display:content;'>
+<form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/show.php' id='tableform' style='display:content;'>
         <table border='1' style='border-collapse:collapse; color:white;border-color:pink'>
         <?php
       if (array_key_exists('table',$_POST)){
@@ -949,7 +949,7 @@ else{
     $sq="SHOW TABLES FROM $db";
     $rr=mysqli_query($conn,$sq);
     ?>
-        <form  method='post' action='http://192.168.96.32/attendence4/show.php'>
+        <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/show.php'>
             <?php
     echo "<select onchange='fun()' id='insert'>";
     while($table=mysqli_fetch_array($rr)){
@@ -1006,7 +1006,7 @@ else{
                 $s="CREATE TABLE down AS SELECT * FROM $tab";
                 $ss=mysqli_query($conn,$s);
                 //$ss=mysqli_query($conn,$d);
-               ?> <form  method='post' action='http://192.168.96.32/attendence4/test.php'> 
+               ?> <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/test.php'> 
                     <input type='text' placeholder='select from above list:'name='tabll' id='table2'/>
                     <input type='submit' name='down' value='download'/>
                 </form>
@@ -1045,7 +1045,7 @@ else{
                 //$df="SELECT * FROM $tab  WHERE date_of_absent=$d";
                 $dd="INSERT INTO down SELECT * FROM $tab  WHERE date_of_absent='$d'";
                 $ddd=mysqli_query($conn,$dd);
-                ?> <form  method='post' action='http://192.168.96.32/attendence4/test.php'> 
+                ?> <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/test.php'> 
                     <input type='text' placeholder='select from above list:'name='tabll' id='table2'/>
                     <input type='submit' name='down' value='download'/>
                 </form>
@@ -1081,7 +1081,7 @@ else{
                 $dd="SELECT * FROM $tab  WHERE id=$nr or studentname=$nr";
                 $dd="INSERT INTO down SELECT * FROM $tab  WHERE id='$nr' or studentname='$nr'";
                 $ddd=mysqli_query($conn,$dd);
-                ?> <form  method='post' action='http://192.168.96.32/attendence4/test.php'> 
+                ?> <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/test.php'> 
                     <input type='text' placeholder='select from above list:'name='tabll' id='table2'/>
                     <input type='submit' name='down' value='download'/>
                 </form>
@@ -1090,7 +1090,7 @@ else{
             }
         ?>
         
-    <form  method='post' action='http://192.168.96.32/attendence4/show.php'>
+    <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/show.php'>
             <table border='1' style='border-collapse:collapse; color:white;border-color:pink'>
             <?php
           if (array_key_exists('table',$_POST)){

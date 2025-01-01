@@ -9,7 +9,7 @@
         alert(val2);
         }
     </script>
-<form  method='post' action='http://192.168.96.32/attendence4/com.php' id='ttform'>
+<form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/com.php' id='ttform'>
     <h1>Search Here with date</h1>
         <?php
         $sn="localhost";
@@ -111,7 +111,7 @@ $array[] = $Store;
     if($df=='s'){
     $count=mysqli_fetch_array ( mysqli_query($conn,"SELECT count(id) FROM $tab WHERE date_of_absent='$input'"));
     ?>
-     <form  method='post' action='http://192.168.96.32/attendence4/show.php' id='tableform' style='display:content;'>
+     <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/show.php' id='tableform' style='display:content;'>
     
     <h4>COUNT::<?php echo $count[0];?></h4>
    <table border='1' style='border-collapse:collapse; color:white;border-color:pink'>
@@ -235,7 +235,7 @@ while($dd=mysqli_fetch_array($ddd)){
     <?php
                     }
                     ?>
-                        <form  method='post' action='http://192.168.96.32/attendence4/test.php'> 
+                        <form  method='post' action='http://192.168.96.32/Attendence-Management/attendence4/test.php'> 
     <input type='submit' name='down' value='download'/>
     </form>
     <?php
