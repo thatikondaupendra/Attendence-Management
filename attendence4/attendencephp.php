@@ -143,12 +143,12 @@ thead{
         <nav>
             <a href="studentdata.html">home</a> 
             <a href="attendence.html">attendance</a> 
-            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/studentlist.php" >insert record</a> | 
-            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/studentdata1.php">upload new student list</a> 
-            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/studentdata2.php"name='deleting1'>delete list</a> 
-            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/studentdata3.php"name='deleterec1'>delete all records</a> 
-            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/studentdata4.php"name='modifys1'>modify content</a>
-            <a method="post" href="http://192.168.96.32/Attendence-Management/attendence4/show.php">show details</a>
+            <a method="post" href="http://192.168.137.1/Attendence-Management/attendence4/studentlist.php" >insert record</a> | 
+            <a method="post" href="http://192.168.137.1/Attendence-Management/attendence4/studentdata1.php">upload new student list</a> 
+            <a method="post" href="http://192.168.137.1/Attendence-Management/attendence4/studentdata2.php"name='deleting1'>delete list</a> 
+            <a method="post" href="http://192.168.137.1/Attendence-Management/attendence4/studentdata3.php"name='deleterec1'>delete all records</a> 
+            <a method="post" href="http://192.168.137.1/Attendence-Management/attendence4/studentdata4.php"name='modifys1'>modify content</a>
+            <a method="post" href="http://192.168.137.1/Attendence-Management/attendence4/show.php">show details</a>
         </nav>
 <?php
 $sn="localhost";
@@ -170,7 +170,7 @@ $name=$regno=$pa=$stu=$year=$branch="";
 //}
 ?>
 <body style="display:'None'">
-<form method="post" action="http://192.168.96.32/Attendence-Management/attendence4/attendencephp1.php">
+<form method="post" action="http://192.168.137.1/Attendence-Management/attendence4/attendencephp1.php">
 <?php
 $sq="SHOW TABLES FROM $db";
 $rr=mysqli_query($conn,$sq);
